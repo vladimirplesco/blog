@@ -1,0 +1,44 @@
+create a new repository on the command line
+echo "# blog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/vladimirplesco/blog.git
+git push -u origin main
+
+Before you install Rails, you should check to make sure that your system has the proper prerequisites installed. These include:
+
+Ruby
+SQLite3
+Node.js
+Yarn
+Install Rails at the command prompt if you haven't yet:
+
+ $ gem install rails
+At the command prompt, create a new Rails application:
+
+ $ rails new myapp
+where "myapp" is the application name.
+
+Change directory to myapp and start the web server:
+
+ $ cd myapp
+ $ bin/rails server
+Run with --help or -h for options.
+
+Go to http://localhost:3000 and you'll see: "Yay! You’re on Rails!"
+
+bin/rails generate controller Articles index --skip-routes
+
+http://localhost:3000/articles,
+
+bin/rails generate model Article title:string body:text
+bin/rails db:migrate
+bin/rails console
+irb> article = Article.new(title: "Hello Rails", body: "I am on Rails!")
+     article.save
+     Article.find(1)
+     Article.all
+
+
